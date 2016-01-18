@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        
+
+<title>DevDojo - Welcome to the DevDojo</title>
+<meta name="description" content="Welcome to the DevDojo">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/static/css/noty.css" />
+<link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/static/css/fonts/styles.css" />
+<link rel="stylesheet" href="/static/css/prism.css" />
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<link rel="stylesheet" href="/static/css/style.css" />
+<link rel="stylesheet" href="/static/css/rrssb.css" />
+<link rel="stylesheet" href="/static/css/animate.min.css" />
+<style type="text/css">.theme_color_background, #signup-form .panel-heading, .post .post-img h3, .block .block-contents p.date .label.label-success, .btn.btn-primary, .second-nav.navbar-default .navbar-nav li.active a, .second-nav.navbar-default .navbar-nav li a:hover, .vjs-default-skin .vjs-play-progress, .vjs-default-skin .vjs-volume-level{ background: #DB1D1B; }.btn.btn-primary, .form-control:focus, .second-nav.navbar-default .navbar-nav li:hover, .second-nav.navbar-default .navbar-nav li.active{ border-color:#DB1D1B; }.post .post-img h6{ background: #ef312f; }.theme_color, a, .page a, footer ul li a, .home footer ul li a{ color:#DB1D1B; }footer ul li a:hover, .home footer ul li a:hover{ color:#ef312f; }</style>
+<style type="text/css">.series .block{ margin-bottom:20px; }</style>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>if (!window.jQuery) { document.write('<script src="http://devdojo.com/content/themes/devdojo/assets/js/jquery.min.js"><\/script>'); }</script>
+
+<link rel="icon" href="http://devdojo.com/content/uploads/settings/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="http://devdojo.com/content/uploads//settings/favicon.png" type="image9sx-icon">
+
+</head>
+
+
+<body class="home">
+
+
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        
+            <div class="navbar-header">
+                <a id="nav-toggle" href="#"><span></span></a>
+                <a href="/" class="navbar-brand"><img src="http://devdojo.com/content/themes/devdojo/assets/img/logo.png" /></a>
+            </div>
+
+
+            <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="/videos" class="dropdown-toggle">Videos</a>
+                        <ul class="dropdown-menu multi-level" role="menu">
+                            <li><a href="/videos">Lessons</a></li>
+                            <li><a href="/shows">Shows</a></li>
+                            <li><a href="/series">Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/posts" class="dropdown-toggle">Articles</a>
+                        <ul class="dropdown-menu multi-level" role="menu">
+                            <li><a href="/posts/category/tutorials">Tutorials</a></li>
+                            <li><a href="/posts/category/how-to">How To</a></li>
+                            <li><a href="/posts/category/technology">Technology</a></li>
+                            <li><a href="/posts/category/chitchat">Chit Chat</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/page/laravel-survival-guide">Learn Laravel-</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="login-desktop"><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
+                    <li class="signup-desktop"><a href="/signup"><i class="dojo-user-circle"></i> Signup</a></li>
+                </ul>
+            </div>
+
+      </div>
+</nav>
+    
+<div class="clear"></div>
+    <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/pgwslider.min.css" />
+    <!-- basic stylesheet -->
+    <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/js/royalslider/royalslider.css">
+    <!-- skin stylesheet (change it if you use another) -->
+    <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/js/royalslider/skins/default/rs-default.css"> 
+    <!-- Main slider JS script file --> 
+    <!-- Create it with slider online build tool for better performance. -->
+    <script src="http://devdojo.com/content/themes/devdojo/assets/js/royalslider/jquery.royalslider.min.js"></script>
+    <style type="text/css">
+        .rsDefault .rsBullets{
+            height:30px;
+            background:none;
+        }
+        .rsDefault .rsBullet{
+            padding:6px 6px 6px;
+            cursor:pointer;
+        }
+    </style>
+
+
+<div class="royalSlider rsDefault">
+   
+        <div class="rsContent" style="background:url(http://devdojo.com/content/uploads/images/December2015/laravel-multiple-file-upload.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/82"><img src="http://devdojo.com/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Laravel Multiple File Upload</div><div class="origin">Laravel Multiple File Upload</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">In this quick video we'll show you how to upload multiple files using a bit of javascript and the Laravel PHP framework.</div><div class="origin">In this quick video we'll show you how to upload multiple files using a bit of javascript and the Laravel PHP framework.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/December2015/laravel-installer.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/81"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Laravel Installer</div><div class="origin">Laravel Installer</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">The Laravel Installer is a package that allows you to run through a setup wizard to setup your Laravel application. Watch to learn more...</div><div class="origin">The Laravel Installer is a package that allows you to run through a setup wizard to setup your Laravel application. Watch to learn more...</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/November2015/shortcodes-in-your-laravel-app.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/80"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Shortcodes in your Laravel App</div><div class="origin">Shortcodes in your Laravel App</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">In this short video we'll show you how to create a shortcode in your view files and replace it with anything you would like using Middleware.</div><div class="origin">In this short video we'll show you how to create a shortcode in your view files and replace it with anything you would like using Middleware.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/November2015/intro-to-flexbox.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/79"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Flexbox Intro</div><div class="origin">Flexbox Intro</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">Checkout this quick Flexbox introduction. It's actually very hand and easy to use!</div><div class="origin">Checkout this quick Flexbox introduction. It's actually very hand and easy to use!</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/November2015/laravel-accessors-and-mutators.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/78"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Laravel Accessors & Mutators </div><div class="origin">Laravel Accessors & Mutators </div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">In this video we'll show you how to use accessors and mutators in your Laravel application. The concept is actually very simple and we'll explain how to use them in this video.</div><div class="origin">In this video we'll show you how to use accessors and mutators in your Laravel application. The concept is actually very simple and we'll explain how to use them in this video.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/November2015/vuejs-intro.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/77"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Vue JS Intro</div><div class="origin">Vue JS Intro</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">In this quick video we will give you a quick introduction into using the Vue JS library. We will talk about data-binding, looping through lists, and events with Vue JS.</div><div class="origin">In this quick video we will give you a quick introduction into using the Vue JS library. We will talk about data-binding, looping through lists, and events with Vue JS.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/October2015/intro-to-bower.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/76"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Introduction to Bower</div><div class="origin">Introduction to Bower</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">Find out how using bower can make managing your front-end libraries super easy.</div><div class="origin">Find out how using bower can make managing your front-end libraries super easy.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/August2015/faker.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/75"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Creating Dummy Data with Laravel 5 </div><div class="origin">Creating Dummy Data with Laravel 5 </div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">Learn how to use the faker package to create dummy data for your application.</div><div class="origin">Learn how to use the faker package to create dummy data for your application.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/August2015/website-screenshots-with-laravel.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/74"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Website Screenshots with Laravel </div><div class="origin">Website Screenshots with Laravel </div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">Learn how to create website snapshots with laravel. Capture a web page via the URL and show a thumbnail for that site.</div><div class="origin">Learn how to create website snapshots with laravel. Capture a web page via the URL and show a thumbnail for that site.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/June2015/5584cc68934e6-create-a-php-login-script.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/72"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Create a PHP Login Script</div><div class="origin">Create a PHP Login Script</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">In this video we will walk you through step-by-step how to create a php login script.</div><div class="origin">In this video we will walk you through step-by-step how to create a php login script.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/June2015/image-uploads-with-laravel.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/71"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Image Uploads with Laravel</div><div class="origin">Image Uploads with Laravel</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">In this quick video you'll learn how easy it is to upload images using the Laravel PHP framework.</div><div class="origin">In this quick video you'll learn how easy it is to upload images using the Laravel PHP framework.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/April2015/homebrew.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/50"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">Homebrew</div><div class="origin">Homebrew</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">Learn how to install homebrew. Learn what homebrew is and how to use it.</div><div class="origin">Learn how to install homebrew. Learn what homebrew is and how to use it.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="rsContent" style="background:url(/content/uploads/images/April2015/mamp-wall.jpg); background-size:cover; background-position:center center;">
+            <div class="bgdim"></div>
+            <div class="home-bg-gradient"></div>
+            <a href="http://devdojo.com/video/49"><img src="/content/themes/devdojo/assets/img/play-button-huge.png" /></a>
+            <div class="container">
+                <div class="details">
+                    <div class="headline" style="opacity: 1;"><div class="shadow">MAMP Introduction</div><div class="origin">MAMP Introduction</div></div>
+                    <div class="description" style="opacity: 1;"><div class="shadow">Learn how to download and install MAMP to get your local web server setup. </div><div class="origin">Learn how to download and install MAMP to get your local web server setup. </div></div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<div class="container">
+    <div id="home-content">
+    
+        <div class="row series" style="margin-bottom:30px; margin-top:v class="col-md-12">
+            <h3><a href="/shows"><i class="dojo-lessons"></i>Latest Video Series</a></h3>
+        
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <article class="block">
+                    <a class="block-thumbnail" href="http://devdojo.com/series/laravel-5-1-basics">
+                        <img src="http://devdojo.com/content/uploads/images/September2015/laravel-5-1-tall-image.jpg">
+                        <div class="details">
+                            <h2>Laravel 5.1 Basics<h2>
+                            <span></span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <article class="block">
+                    <a class="block-thumbnail"  href="http://devdojo.com/series/dev-design-quickie">
+                        <img src="http://devdojo.com/content/uploads/images/August2015/dev-design-quickie-cover.jpg">
+                        <div class="details">
+                            <h2>Dev Design Quickie</h2>
+                            <span></span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <article class="block">
+                    <a class="block-thumbnail" href="http://devdojo.com/series/sketch-3-tutorials">
+                        <img src="http://devdojo.com/content/uploads/images/August2015/sketch-3-tutorials-cover.jpg">
+                        <div class="details">
+                            <h2>Sketch-2-tutorials</h2>
+                            <span></span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <article class="block">
+                    <a class="block-thumbnail" href="http://devdojo.com/series/command-line-basics">
+                        <img src="http://devdojo.com/content/uploads/images/August2015/command-line-basics-cover.jpg">
+                        <div class="details">
+                            <h2>Command Line Basics</h2>
+                            <span></span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <article class="block">
+                    <a class="block-thumbnail" href="http://devdojo.com/series/html5-basics">
+                        <img src="http://devdojo.com/content/uploads/images/August2015/html5-basics-cover.jpg">
+                        <div class="details">
+                            <h2>HTML5 Basics</h2>
+                            <span></span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <article class="block">
+                    <a class="block-thumbnail" href="http://devdojo.com/series/css-basics">
+                        <img src="http://devdojo.com/content/uploads/images/August2015/css-basics-cover.jpg">
+                        <div class="details">
+                            <h2>CSS Basic</h2>
+                            <span></span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="pagination" style="text-align:center; display:block; margin:0px auto">
+        <ul class="pagination" style="margin:0px;float:right;">
+            <li><a href="/secries">View All Video Series</a></li>
+        </ul>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h3><a href="/videos"><i class="fa fa-youtube-play" style="position:relative;top:3px;"></i> Latest Lessons</a></h3>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/82">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/December2015/laravel-multiple-file-upload-medium.jpg">
+                    <div class="details">
+                        <h2>Laravel Multiple File Upload</h2>
+                        <span>11:19</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 27th, 2015<span class="label label-info">Free</span></p>
+                    <p class="desc">In this quick video we'll show you how to upload multiple files using a bit of javascript ...</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/December2015/laravel-installer-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Laravel Installer</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">The Laravel Installer is a package that allows you to run through a setup wizard to setup...</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/November2015/shortcodes-in-your-laravel-app-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Laravel Installer</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">In this short video we'll show you how to create a shortcode in your view files and replac...</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/November2015/intro-to-flexbox-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Laravel Installer</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">Checkout this quick Flexbox introduction. It's actually very hand a0sy to use!</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/November2015/laravel-accessors-and-mutators-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Laravel Installer</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">In this video we'll show you how to use accessors and mutators in your Laravel application...</p>
+                </div>
+            </article>
+        </div>      
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/November2015/vuejs-intro-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Vue JS Intro</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">In this quick video we will give you a quick introduction into using the Vue JS library. W...</p>
+                </div>
+            </article>
+        </div>           
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/October2015/intro-to-bower-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Vue JS Intro</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">Find out how using bower can make managing your front-end libraries super easy.</p>
+                </div>
+            </article>
+        </div>     
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/August2015/faker-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Vue JS Intro</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">Learn how to use the faker package to create dummy data for your application.</p>
+                </div>
+            </article>
+        </div>          
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/August2015/website-screenshots-with-laravel-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Website Screenshots with Laravel</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">Learn how to create website snapshots with laravel. Capture a web page via the URL and sho...</p>
+                </div>
+            </article>
+        </div>       
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/July2015/sublime-text-snippets-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Website Screenshots with Laravel</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">In this quick video we'll show you how easy it is to create sublime text snippets to easil...</p>
+                </div>
+            </article>
+        </div>     
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uplads/images/June2015/5584cc68934e6-create-a-php-login-script-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Website Screenshots with Laravel</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">In this video we will walk you through step-by-step how to create a php login script.</p>
+                </div>
+            </article>
+        </div>   
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/video/81">
+                    <div class="thumbnail-overlay"></div>
+                    <span class="play-button"></span>
+                    <img src="http://devdojo.com/content/uploads/images/June2015/image-uploads-with-laravel-medium.jpg">
+                    <div class="thumbnail-overlay">
+                        <h2>Website Screenshots with Laravel</h2>
+                        <span>5.57</span>
+                    </div>
+                </a>
+                <div class="block-contents">
+                    <p class="date">December 14th,2015<span class="label label-info">Free</span></p>
+                    <p class="desc">In this quick video you'll learn how easy it is to upload images using the Laravel PHP fra...</p>
+                </div>
+            </article>
+        </div>          
+    </div>
+    
+    <div class="pagination" style="text-align:center;display:block;margin:0px auto">
+        <ul class="pagination" style="margin:0px; float:right;">
+            <li><a href="/videos">View All Lessons</a></li>
+        </ul>
+    </div>
+    
+    <div class="row" style="margin-bottom:30px; margin-top:0px;">
+        <div class="col-md-12">
+            <h3><a href="/shows"><i class="dojo-lessons"></i>Latest Shows</a></h3>
+        </div>
+        
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/shows/foundation">
+                    <img src="http://devdojo.com/content/uploads/images/July2015/55b8043720437-foundation.jpg">
+                    <div class="details">
+                        <h2>Foundation</h2>
+                        <span></span>
+                    </div>
+                </a>
+            </article>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/shows/foundation">
+                    <img src="http://devdojo.com/content/uploads/images/July2015/55b91e8351a08-the-treehouse-show.jpg">
+                    <div class="details">
+                        <h2>The Treehouse Show</h2>
+                        <span></span>
+                    </div>
+                </a>
+            </article>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/shows/foundation">
+                    <img src="http://devdojo.com/content/uploads/images/July2015/55b9249fe16a5-envato-madeby.jpg">
+                    <div class="details">
+                        <h2>Evato Made By</h2>
+                        <span></span>
+                    </div>
+                </a>
+            </article>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/shows/foundation">
+                    <img src="http://devdojo.com/content/uploads/images/July2015/screen-savers-cover.jpg">
+                    <div class="details">
+                        <h2>The New Screensaver</h2>
+                        <span></span>
+                    </div>
+                </a>
+            </article>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/shows/foundation">
+                    <img src="http://devdojo.com/content/uploads/images/July2015/screen-savers-cover.jpg">
+                    <div class="details">
+                        <h2>Unbox Therapy</h2>
+                        <span></span>
+                    </div>
+                </a>
+            </article>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+            <article class="block">
+                <a class="block-thumbnail" href="http://devdojo.com/shows/foundation">
+                    <img src="http://devdojo.com/content/uploads/images/July2015/tech-crunch.jpg">
+                    <div class="details">
+                        <h2>Tech Crunch</h2>
+                        <span></span>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+    
+    <div class="pagination" style="text-align:center;display:block;margin:0px auto;">
+        <ul class="pagination" style="margin:0px; float:right;">
+            <li><a href="/shows">View All Shows</a></li>
+        </ul>
+    </div>
+    
+    <div style="clear:both; height:30px;"></div>
+    
+</div>
+
+<script src="http://devdojo.com/content/themes/devdojo/assets/js/pgwslider.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.pgwSlider').pgwSlider({maxHeight:360});
+        
+        $('.signup-sidebar').hover({
+            $(this).find('a').removeClass('bounce').addClass('animated rubberBand');
+            $(this).find('img').removeClass('bounce').addClass('animated');
+        },function(){
+            $(this).find('a').removeClass('rubberBand').addClass('bounce');
+        });
+    });
+</script>
+<script>
+    jQuery(document).ready(function($){
+        $(".royalSlider").royalSlider({
+            keyboardNavEnabled: true,
+            loop: true,
+            transitionType: 'fade',
+            autoPlay:{
+                enabled: true,
+                pauseOnHover: false,
+                delay:5500
+            }
+        });
+    });
+</script>
+
+<script src="http://devdojo.com/content/themes/devdojo/assets/js/rrssb.min.js"></script>
+<div class="bottom_bar">
+    <div class="container">
+        <div class="notification">
+            <h1>Web Dev/Design Screencasts & Tutorials!</h1>
+        </div>
+        <div class="social">
+            <h3>Follow us on:</h3>
+            <a href="http://facebook.com/thedevdojo" target="_blank" class="share"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/thedevdojo" target="_blank" class="share"><i class="fa fa-twitter"></i></a>
+            <a href="http://plus.google.com/hellovideoapp" target="_blank" class="share"><i class="fa fa-google-plus"></i></a>
+            <a href="http://youtube.com/" target="_blank" class="share"><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="/" class="logo"><img src="http://devdojo.com/content/uploads/settings/logo.png"></a>
+                <p></p>
+                <a href="http://facebook.com/thedevdojo" class="facebook social-link"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/thedevdojo" class="twitter social-link"><i class="fa fa-twitter"></i></a>
+                <a href="http://plus.google.com/hellovideoapp" class="google social-link"><i class="fa fa-google-plus"></i></a>
+                <a href="http://youtube.com/" class="youtube social-link"><i class="fa fa-youtube"></i></a>
+            </div>
+            
+            <div class="col-md-3">
+                <h4>Video Categories</h4>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">SQL</a></li>
+                    <li><a href="#">Misc</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">Laravel</a></li>                    
+                </ul>
+            </div>
+            
+            <div class="col-md-3">
+                <h4>Post Categories</h4>
+                <ul>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Chit Chat</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">How To</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-2">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">The Laravel Survival Guide</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Signups</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="http://devdojo.com/content/themes/devdojo/assets/js/headroom.min.js"></script>
+<script type="text/javascript" src="http://devdojo.com/content/themes/devdojo/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://devdojo.com/content/themes/devdojo/assets/js/moment.min.js"></script>
+<script type="text/javascript" src="http://devdojo.com/content/themes/devdojo/assets/js/noty/jquery.noty.js"></script>
+<script type="text/javascript" src="http://devdojo.com/content/themes/devdojo/assets/js/noty/themes/default.js"></script>
+<script type="text/javascript" src="http://devdojo.com/content/themes/devdojo/assets/js/noty/layouts/top.js"></script>
+<script type="text/javascript">
+    var myElement = document.querySelector(".navbar");
+    var headroom = new Headroom(myElement, { offset: 65 });
+    headroom.init();
+    
+    $('document').ready(function(){
+        $('.dropdown').hover(function(){
+            $(this).addClass('open');
+        }, function(){
+            $(this).removeClass('open');
+        });
+        
+        $('#nav-toggle').click(function(){
+            $(this).toggleClass('active');
+            $('.navbar-collapse').toggle();
+            $('body').toggleClass('nav-open');
+        });
+        $('#mobile-subnav').click(function(){
+            if ($('.second-nav .navbar-left').css('display') == 'block'){
+                $('.second-nav .navbar-left').slideUp(function(){
+                    $(this).addClass('not-visible');
+                });
+                $(this).html('<i class="fa fa-bars"></i> Open Submenu');
+            }else{
+                $('.second-nav .navbar-left').slideDown(function(){
+                    $(this).removeClass('not-visible');
+                });
+                $(this).html('<i class="fa fa-close"></i> Close Submenu');
+            }
+        });
+    });
+
+    /**************  LOGIN MODAL FUNCTIONALITY   *******************/
+    var loginSignupModal = $('<div class="modal fade animated bounceInDown" id="loginSignupModal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><i class="dojo-close-delete"></i><span class="sr-only">Close</span></button><h4 class="modal-title" id="myModalLabel">Login Below</h4></div><div class="modal-body"></div></div></div></div>');
+
+    $(document).ready(function(){
+        //Load the Modal Window for login signup when they are clicked
+        $('.login-desktop a').click(function(e)){
+            e.preventDefault();
+            $('body').prepend(loginSignupModal);
+            $('#loginSignupModal .modal-body').load($(this).attr('href') + '?redirect=' + document.URL + ' .form-signin', function(){
+                $('#loginSignupModal').show(200, function(){
+                    setTimeout(function(){$('#email').focus()},300):
+                });
+                $('#loginSignupModal').modal();
+            });
+
+            //Be sure to remove the modal from the DOM after it is closed
+            $('#loginSignupModal').on('hidden.bs.modal', function(e){
+                $('#loginSignupModal').remove();
+            });
+        }
+    });
+</script>
+
+
+</body>
+</html>
+

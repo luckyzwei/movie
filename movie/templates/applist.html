@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>applist</title>
+<meta name="description" content="keywords">
+<meta name="viewport" content="initial-scale,,user-scalable,maximum-scale=1">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<link rel="stylesheet" href="/static/css/style.css" />
+<link rel="stylesheet" href="/static/css/rrssb.css" />
+<link rel="stylesheet" href="/static/css/animate.min.css" />
+<style type="text/css">.theme_color_background, #signup-form .panel-heading, .post .post-img h3, .block .block-contents p.date .label.label-success, .btn.btn-primary, .second-nav.navbar-default .navbar-nav li.active a, .second-nav.navbar-default .navbar-nav li a:hover, .vjs-default-skin .vjs-play-progress, .vjs-default-skin .vjs-volume-level{ background: #DB1D1B; }.btn.btn-primary, .form-control:focus, .second-nav.navbar-default .navbar-nav li:hover, .second-nav.navbar-default .navbar-nav li.active{ border-color:#DB1D1B; }.post .post-img h6{ background: #ef312f; }.theme_color, a, .page a, footer ul li a, .home footer ul li a{  }footer ul li a:hover, .home footer ul li a:hover{ color:#ef312f; }</style>
+<style type="text/css">.series .block{ margin-bottom:20px; }</style>
+<style type="text/css">
+.navbar-default{
+    background-color:rgba(0,175,239,0.95);
+    border-bottom:1px solid #00aeef;
+}
+</style>
+<link href='/static/css/opensans.css' rel='stylesheet' type='text/css'>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body class="home">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a id="nav-toggle" href="#"><span></span></a>
+                <a href="/" class="navbar-brand"><img src="http://devdojo.com/content/themes/devdojo/assets/img/logo.png" /></a>
+            </div>
+
+            <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="/videos" class="dropdown-toggle">Videos</a>
+                        <ul class="dropdown-menu multi-level" role="menu">
+                            <li><a href="/videos">Lessons</a></li>
+                            <li><a href="/shows">Shows</a></li>
+                            <li><a href="/series">Series</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/posts" class="dropdown-toggle">Articles</a>
+                        <ul class="dropdown-menu multi-level" role="menu">
+                            <li><a href="/posts/category/tutorials">Tutorials</a></li>
+                            <li><a href="/posts/category/how-to">How To</a></li>
+                            <li><a href="/posts/category/technology">Technology</a></li>
+                            <li><a href="/posts/category/chitchat">Chit Chat</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/page/laravel-survival-guide">Learn Laravel-</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="form-inline nav-search">
+                        <input type="text" class="form-control" id="searchtext" placeholder="输入名字">
+                        <button class="btn btn-default">搜索</button>
+                    </form>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container realcontent">
+        <div style="padding:0 10px">
+            <div class="row" style="background:#F6F5F6;">
+                <div class="title-box">
+                    <table class="table" style="margin-bottom:10px;">
+                        <tbody>
+                            <tr>
+                                <td class="tag-span2">年份:</td>
+                                <td>
+                                    <a href="#" class="app-tags-active" val="all">全部</a>
+                                    <a href="#" class="app-tags" val="2015">2015</a>
+                                    <a href="#" class="app-tags" val="2014">2014</a>
+                                    <a href="#" class="app-tags" val="2014">2013</a>
+                                    <a href="#" class="app-tags" val="2014">2012</a>
+                                    <a href="#" class="app-tags" val="2014">2011</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tag-span2">评分排序:</td>
+                                <td>
+                                    <a href="#" class="app-tags-active" val="all">全部</a>
+                                    <a href="#" class="app-tags" val="2015">10分以下</a>
+                                    <a href="#" class="app-tags" val="2014">9分以下</a>
+                                    <a href="#" class="app-tags" val="2014">8分以下</a>
+                                    <a href="#" class="app-tags" val="2014">7分以下</a>
+                                    <a href="#" class="app-tags" val="2014">6分以下</a>
+                                </td>
+                            </tr>
+                            <tr style="margin-bottom:1px; solid:#DDD">
+                                <td class="tag-span2">国家地区:</td>
+                                <td>
+                                    <a href="#" class="app-tags-active" val="all">全部</a>
+                                    <a href="#" class="app-tags" val="2015">中国</a>
+                                    <a href="#" class="app-tags" val="2014">美国</a>
+                                    <a href="#" class="app-tags" val="2014">日本</a>
+                                    <a href="#" class="app-tags" val="2014">韩国</a>
+                                    <a href="#" class="app-tags" val="2014">印度</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-1-5 col-sm-4 col-xs-6" style="padding: 0 5px;">
+                    <div class="app-item">
+                        <a style="position:relative;display:block;" href="#">
+                            <img alt="暴风战记" title="暴风战记" src="http://ww3.sinaimg.cn/large/0069qWFHgw1f082cw8llqj30bo0go0vm.jpg" height="230" width=100%>
+                        </a>
+                        <div class="meta">
+                            <div style="width:100%;overflow:hidden;height:20px;">
+                                <a href="#" class="app-name">暴风战记</a>
+                                <span class="otherinfo">-7.9</span>
+                            </div>
+                            <div class="otherinfo">
+                                类型:
+                                <a class="apptype">卡牌</a>
+                                <a class="apptype">ARPG</a>
+                                <a class="apptype">动作</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

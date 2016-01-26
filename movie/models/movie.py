@@ -42,6 +42,18 @@ class country(models.Model):
     def __unicode__(self):
         return u'%s' % name
 '''
+
+#大的幻灯片推荐
+class movietop(models.Model):
+    title = models.CharField(max_length=200, blank=False, null=False)
+    desc = models.CharField(max_length=200, blank=False, null=False)
+    picurl = models.CharField(max_length=500, blank=False, null=False)
+    movieurl = models.CharField(max_length=500, blank=False, null=False)
+    class Meta:
+        db_table = u'top'
+        app_label = 'movie'
+    def __unicode__(self):
+        return u"%s" % title
 class moviedetail(models.Model):
     title = models.CharField(max_length=200, blank=False, null=False)
     totle_title = models.CharField(max_length=200, blank=False, null=False)
@@ -74,3 +86,10 @@ class moviedetail(models.Model):
     def __unicode__(self):
         return u'%s' % title
 
+#热门推荐
+class moviehot(models.Model):
+    title = models.CharField(max_length=200, blank=False, null=False)
+    movie = models.ForeignKey(moviedetail)
+    class Meta:
+        db_table = u'hot'
+        app_label = 'movie'

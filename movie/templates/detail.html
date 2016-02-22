@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>detail page</title>
+<title>{{title}}</title>
 <meta name="description" content="keywords">
 <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/static/css/noty.css" />
+<link rel="stylesheet" href="/static/css/prism.css" />
 <!--[if gte IE 9]>
   <style type="text/css">
     .gradient {
@@ -28,34 +30,34 @@
 </head>
 
 <body class="home">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        
             <div class="navbar-header">
-                <a id="nav-toggle" href="#"><span></span></a>
-                <a href="/" class="navbar-brand"><img src="http://devdojo.com/content/themes/devdojo/assets/img/logo.png" /></a>
+                <a href="/" class="navbar-brand" style="color:black;font-weight:initial">SDK管理中心</a>
             </div>
+
 
             <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/">首页</a></li>
                     <li class="dropdown">
-                        <a href="/videos" class="dropdown-toggle">Videos</a>
+                        <a href="/videos" class="dropdown-toggle">热门应用</a>
                         <ul class="dropdown-menu multi-level" role="menu">
-                            <li><a href="/videos">Lessons</a></li>
-                            <li><a href="/shows">Shows</a></li>
-                            <li><a href="/series">Series</a></li>
+                            <li><a href="/videos">抢先热门</a></li>
+                            <li><a href="/shows">高清热门</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="/posts" class="dropdown-toggle">Articles</a>
+                        <a href="/posts" class="dropdown-toggle">经典应用</a>
                         <ul class="dropdown-menu multi-level" role="menu">
-                            <li><a href="/posts/category/tutorials">Tutorials</a></li>
-                            <li><a href="/posts/category/how-to">How To</a></li>
-                            <li><a href="/posts/category/technology">Technology</a></li>
-                            <li><a href="/posts/category/chitchat">Chit Chat</a></li>
+                            <li><a href="/posts/category/tutorials">烧脑应用</a></li>
+                            <li><a href="/posts/category/how-to">动作应用</a></li>
+                            <li><a href="/posts/category/technology">温情片刻</a></li>
+                            <li><a href="/posts/category/chitchat">走出困境</a></li>
                         </ul>
                     </li>
-                    <li><a href="/page/laravel-survival-guide">Learn Laravel-</a></li>
+                    <li><a href="/page/laravel-survival-guide">排行榜</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <form class="form-inline nav-search">
@@ -65,8 +67,8 @@
                 </ul>
             </div>
 
-        </div>
-    </nav>
+      </div>
+</nav>
 
     <div class="container realcontent">
         <div class="container-fluid detail_context">
@@ -74,18 +76,18 @@
                 <li><a href="#">首页</a></li>
                 <li><a href="#">SDK列表</a></li>
                 <li><a href="#">游戏列表</a></li>
-                <li>暴风战记</li>
+                <li>{{title}}</li>
             </ol>
             <div class="row">
                 <div class="col-md-9">
                     <h1 class="info-title">
-                        暴风战记
-                        <span class="info-year">(2016)</span>
+                        {{totle_title}}
+                        <span class="info-year">{{year}}</span>
                     </h1>
                     <div class="row">
                         <div class="col-md-4" style="padding-right:5px;">
                             <a href="#" style="display:block;position:relative;">
-                                <img class="img-thumbnail" alt="替代" width="100%" src="http://ww4.sinaimg.cn/large/0069qWFHgw1f00ie4fvswj30bw0goadf.jpg">
+                                <img class="img-thumbnail" alt="pic" width="100%" src="{{picurl}}">
                             </a>
                         </div>
                         <div class="col-md-8" style="padding-right:5px;">
@@ -93,44 +95,49 @@
                                 <tbody>
                                 <tr>
                                     <td class="span2"><span class="info-label">导演</span></td>
-                                    <td><a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BE%90%E7%9A%93%E5%B3%B0">徐皓峰</a></td>
+                                    <td><!--a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BE%90%E7%9A%93%E5%B3%B0"-->{{directors}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">编剧</span></td>
-                                    <td><a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BE%90%E7%9A%93%E5%B3%B0">徐皓峰</a></td>
+                                    <td><!--a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BE%90%E7%9A%93%E5%B3%B0"-->{{bianjus}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">主演</span></td>
-                                    <td id="casts" style="position:relative;"><a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BB%96%E5%87%A1">廖凡</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E5%AE%8B%E4%BD%B3">宋佳</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E8%92%8B%E9%9B%AF%E4%B8%BD">蒋雯丽</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%87%91%E5%A3%AB%E6%9D%B0">金士杰</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E5%AE%8B%E6%B4%8B">宋洋</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%BB%84%E8%A7%89">黄觉</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%BA%A6%E8%BF%AA%E5%A8%9C">麦迪娜</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BC%A0%E5%82%B2%E6%9C%88">张傲月</a> /<span style="display:none;"><a target="_blank" href="http://www.id97.com/videos/search/name/%E9%A9%AC%E5%90%9B">马君</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%99%88%E8%A7%82%E6%B3%B0">陈观泰</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E7%86%8A%E6%AC%A3%E6%AC%A3">熊欣欣</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E6%88%B4%E7%AB%8B%E5%BF%8D">戴立忍</a></span> <a class="casts-swith"><i class="glyphicon glyphicon-chevron-down"></i>显示全部</a></td>
+                                    <!--td id="casts" style="position:relative;"><a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BB%96%E5%87%A1">廖凡</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E5%AE%8B%E4%BD%B3">宋佳</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E8%92%8B%E9%9B%AF%E4%B8%BD">蒋雯丽</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%87%91%E5%A3%AB%E6%9D%B0">金士杰</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E5%AE%8B%E6%B4%8B">宋洋</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%BB%84%E8%A7%89">黄觉</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%BA%A6%E8%BF%AA%E5%A8%9C">麦迪娜</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E5%BC%A0%E5%82%B2%E6%9C%88">张傲月</a> /<span style="display:none;"><a target="_blank" href="http://www.id97.com/videos/search/name/%E9%A9%AC%E5%90%9B">马君</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E9%99%88%E8%A7%82%E6%B3%B0">陈观泰</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E7%86%8A%E6%AC%A3%E6%AC%A3">熊欣欣</a> /<a target="_blank" href="http://www.id97.com/videos/search/name/%E6%88%B4%E7%AB%8B%E5%BF%8D">戴立忍</a></span> <a class="casts-swith"><i class="glyphicon glyphicon-chevron-down"></i>显示全部</a></td-->
+                                    <td id="casts" style="position:relative;">{{actors}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">类型</span></td>
-                                    <td><a target="_blank" href="http://www.id97.com/videos/movie?tags=%E5%89%A7%E6%83%85">剧情</a> / <a target="_blank" href="http://www.id97.com/videos/movie?tags=%E5%8A%A8%E4%BD%9C">动作</a> / <a target="_blank" href="http://www.id97.com/videos/movie?tags=%E6%AD%A6%E4%BE%A0">武侠</a></td>
+                                    <!--td><a target="_blank" href="http://www.id97.com/videos/movie?tags=%E5%89%A7%E6%83%85">剧情</a> / <a target="_blank" href="http://www.id97.com/videos/movie?tags=%E5%8A%A8%E4%BD%9C">动作</a> / <a target="_blank" href="http://www.id97.com/videos/movie?tags=%E6%AD%A6%E4%BE%A0">武侠</a></td-->
+                                    <td>{{types}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">制片国家</span></td>
-                                    <td><a target="_blank" href="http://www.id97.com/videos/movie?country=%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86">中国大陆</a></td>
+                                    <!--td><a target="_blank" href="http://www.id97.com/videos/movie?country=%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86">中国大陆</a></td-->
+                                    <td>{{country}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">上映时间</span></td>
-                                    <td>2015-12-10(中国大陆) / 2015-11-11(台北金马影展)</td>
+                                    <!--td>2015-12-10(中国大陆) / 2015-11-11(台北金马影展)</td-->
+                                    <td>{{uptime}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">片长</span></td>
-                                    <td>109分钟</td>
+                                    <td>{{timelen}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">又名</span></td>
-                                    <td>师傅 / The Master</td>
+                                    <td>{{altername}}</td>
                                 </tr>
                                 <tr>
                                     <td class="span2"><span class="info-label">评分</span></td>
-                                    <td>豆瓣：<a rel="nofollow" class="score" target="_blank" href="http://movie.douban.com/subject/25919910/">8.2 <i class="glyphicon glyphicon-new-window"></i></a></td>
+                                    <!--td>豆瓣：<a rel="nofollow" class="score" target="_blank" href="http://movie.douban.com/subject/25919910/">8.2 <i class="glyphicon glyphicon-new-window"></i></a></td-->
+                                    <td>豆瓣:{{doubanscore}}</td>
                                 </tr>
                                 </tbody>
                             </table>
                             <p style="color:#777;"><strong>剧情介绍:</strong></p>
-                            <p class="summary">民国年间南派咏春传人陈识（廖凡 饰）来到天津，结识了天津武术泰斗郑山傲（金世杰 饰），为在武术界开馆立足，郑山傲建议陈识用教徒弟踢馆的传统方式达成目的。几经周折，陈识娶了一名天津绝色女子赵国卉（宋佳 饰）为妻，还收下了本地青年耿良辰（宋洋 饰）为徒代其踢馆，夫妻二人暂居在贫民窟，防被踢馆的仇家前来寻仇。陈识与妻子原本看不上好斗好色的耿良辰，但接触后也发觉了耿良辰的可取之处。但随着第八家武馆邹馆长（蒋雯丽 饰）和军界人士林希文（黄觉 饰）的介入，天津武术界面临着一场巨变，靠武术复兴家业的愿望、对妻子的爱意，以及作为师父的责任，让陈识陷入了两难之境。</p>
+                            <p class="summary">{{summary}}</p>
                         </div>
                     </div>
                 </div>
@@ -140,7 +147,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-default download-list">
                         <div class="panel-heading">
-                            <strong>《暴风战记》 百度网盘 迅雷下载</strong>
+                            <strong>《{{title}}》 百度网盘 迅雷下载</strong>
                         </div>
                         <table class="table">
                             <tbody>
@@ -148,31 +155,25 @@
                                     <td style="vertical-align:middle;padding-right:0;" align="center" width="50px"><span class="baidu-icon">网盘</span></td>
                                     <td class="text-break">
                                         <div style="width:100%;height:20px;overflow:hidden;">
-                                            <a rel="nofollow" target="_blank" href="http://pan.baidu.com/s/1skkL9oh">暴风战记 - 百度网盘,密码:</a>
-                                            <strong>drj4</strong>
+                                            <a rel="nofollow" target="_blank" href="{{baiduyunlink}}">{{title}} - 百度网盘,密码:</a>
+                                            <strong>{{baiduyunpwd}}</strong>
                                         </div>
                                     </td>
                                 </tr>
+                                {% for magnet in mag_list%}
                                 <tr>
                                     <td style="vertical-align:middle;padding-right:0;" align="center" width="50px"><span class="magnet-icon">磁力</span></td>
                                     <td class="text-break">
                                         <div style="width:100%;height:20px;overflow:hidden;">
-                                            <a rel="nofollow" target="_blank" href="magnet:?xt=urn:btih:25f969114ce08d627df8c2aabb1f59870f376fd8">暴风战记720p</a>
+                                            <a rel="nofollow" target="_blank" href="{{magnet}}">{{magnet}}</a>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td style="vertical-align:middle;padding-right:0;" align="center" width="50px"><span class="magnet-icon">磁力</span></td>
-                                    <td class="text-break">
-                                        <div style="width:100%;height:20px;overflow:hidden;">
-                                            <a rel="nofollow" target="_blank" href="magnet:?xt=urn:btih:25f969114ce08d627df8c2aabb1f59870f376fd8">暴风战记1080p</a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                         <div class="panel-footer download-help">
-                            <strong>《暴风战记》 -资源下载帮助</strong>
+                            <strong>《{{title}}》 -资源下载帮助</strong>
                             <br>
                             1. 百度云盘请保存到自己的云盘中播放
                             <br>
@@ -198,6 +199,44 @@
         </em>
     </footer>
 
+<script type="text/javascript" src="/static/js/headroom.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/moment.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.noty.js"></script>
+<script type="text/javascript" src="/static/js/default.js"></script>
+<script type="text/javascript" src="/static/js/top.js"></script>
+<script type="text/javascript">
+    var myElement = document.querySelector(".navbar");
+    //var headroom = new Headroom(myElement, { offset: 65 });
+    //headroom.init();
+    
+    $('document').ready(function(){
+        $('.dropdown').hover(function(){
+            $(this).addClass('open');
+        }, function(){
+            $(this).removeClass('open');
+        });
+        
+        $('#nav-toggle').click(function(){
+            $(this).toggleClass('active');
+            $('.navbar-collapse').toggle();
+            $('body').toggleClass('nav-open');
+        });
+        $('#mobile-subnav').click(function(){
+            if ($('.second-nav .navbar-left').css('display') == 'block'){
+                $('.second-nav .navbar-left').slideUp(function(){
+                    $(this).addClass('not-visible');
+                });
+                $(this).html('<i class="fa fa-bars"></i> Open Submenu');
+            }else{
+                $('.second-nav .navbar-left').slideDown(function(){
+                    $(this).removeClass('not-visible');
+                });
+                $(this).html('<i class="fa fa-close"></i> Close Submenu');
+            }
+        });
+    });
+</script>
 </body>
 </html>
 

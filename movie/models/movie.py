@@ -53,7 +53,7 @@ class movietop(models.Model):
         db_table = u'top'
         app_label = 'movie'
     def __unicode__(self):
-        return u"%s" % title
+        return u"%s" % self.title
 class moviedetail(models.Model):
     title = models.CharField(max_length=200, blank=False, null=False)
     totle_title = models.CharField(max_length=200, blank=False, null=False)
@@ -84,7 +84,7 @@ class moviedetail(models.Model):
         db_table = u'detail'
         app_label = 'movie'
     def __unicode__(self):
-        return u'%s' % title
+        return u'%s' % self.title
 
 #热门推荐
 class moviehot(models.Model):

@@ -2452,4 +2452,8 @@ body,html{
     background: #F6F5F6;
 }
 
+.span2{
+    vertical-align:middle !important;
+    width:80px;
+}
 

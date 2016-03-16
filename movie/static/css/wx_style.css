@@ -1,0 +1,92 @@
+html {
+    height:100%;
+}
+
+body {
+    height:100%;
+}
+
+.left-pa{
+    padding-left:20px;
+    padding-right:20px;
+}
+.wx-block{
+    background:#fff;
+    position: relative;
+}
+
+.wx-block a.wx-block-thumbnail{
+    position: relative;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    display: block;
+}
+
+.wx-block a.wx-block-thumbnail img{
+    width:100%;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.wx-block a .wx-block-thumbnail .wx-details{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    z-index:2;
+}
+.wx-block a.wx-block-thumbnail .wx-details h2 {
+  float: left;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  cursor: auto;
+  display: inline;
+  font-size: 20px;
+  height: auto;
+  letter-spacing: -0.5px;
+  line-height: 25px;
+  text-align: left;
+  text-decoration: none;
+  width: auto;
+  padding: 0px 15px;
+  position: absolute;
+  bottom: 3px;
+  max-height: 25px;
+  overflow: hidden;
+  color: #000;
+  max-width: 85%;
+}
+.wx-block .wx-block-contents {
+  margin-bottom: 25px;
+  float: left;
+  padding: 5px;
+  padding-top: 0px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  width: 100%;
+}
+.wx-block .wx-block-contents p.wx-name {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #333;
+  display: block;
+  float: left;
+  font-size: 15px;
+  height: 10px;
+  padding-top: 1px;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+}
+.wx-block .wx-block-contents p.wx-name .label {
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: -1px;
+}
+.wx-block .wx-block-contents p.wx-name .label.label-info {
+  background: #C0C0C0;
+}
+.title{
+    margin:10px;
+}

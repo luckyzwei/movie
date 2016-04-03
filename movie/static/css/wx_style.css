@@ -71,7 +71,7 @@ body {
   color: #333;
   display: block;
   float: left;
-  font-size: 15px;
+  font-size: 7px;
   height: 10px;
   padding-top: 1px;
   width: 100%;
@@ -89,4 +89,46 @@ body {
 }
 .title{
     margin:10px;
+}
+
+.wx-info-title{
+    word-wrap:break-word;
+    margin:0,0,15px;
+    font-size:24px;
+}
+
+.wx-info-year{
+    display:inline-block;
+    color:#888;
+}
+.wx-img-thumbnail{
+    padding:1px;
+    border-radius:0;
+}
+.wx-span2{
+    vertical-align:middle !important;
+    width:80px;
+}
+.wx-baidu-icon{
+    display:inline-block;
+    background-color:#DFDFDF;
+    color:#999;
+    padding:0,5px;
+    border-radius:2px;
+    cursor:default;
+    text-decoration:none;
+    min-width:30px;
+}
+
+.weui_tabbar_label{
+    padding-top:11px;
+    padding-bottom:11px;
+    font-size:15px;
+}
+.typelist{
+   padding-left:20px; 
+}
+.pageinfo{
+   padding-left:30%;
+   padding-right:30%;
 }

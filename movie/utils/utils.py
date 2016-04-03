@@ -95,6 +95,7 @@ def urlpar2dic(urlpar):
 def getpagenum(all_count,one_page_count,current_page,pagenumber):
     pagedict = {}
     totle_page = int(ceil(all_count/one_page_count))
+    pagedict['curpage'] = current_page
     if totle_page == 0:
         pagedict['close'] = True
         return pagedict
@@ -123,3 +124,21 @@ def getpagenum(all_count,one_page_count,current_page,pagenumber):
     number.sort()
     pagedict['pages'] = number
     return pagedict
+
+def RequestGetPa(request, fieldname):
+    if fieldname in request.GET and request.GET[fieldname]:
+        return True,request.GET[fieldname] 
+    return False, None
+
+def RequestPostPa(request, fieldname):
+    if fieldname in request.POST and request.POST[fieldname]:
+        return True, request.POST[fieldname]
+    return False, None
+
+def BatchGetPostPa(request, fieldnamedict):
+    returndict = {}
+    for fieldname in fieldnamedict:
+        if fieldname in request.POST and request.POST[fieldname]:
+
+def ReturnMsg(filename, msg):
+    return render_to_response(filename, {'msg':msg})

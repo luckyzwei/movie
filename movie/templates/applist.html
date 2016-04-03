@@ -28,34 +28,34 @@
 </head>
 
 <body class="home">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        
             <div class="navbar-header">
-                <a id="nav-toggle" href="#"><span></span></a>
-                <a href="/" class="navbar-brand"><img src="http://devdojo.com/content/themes/devdojo/assets/img/logo.png" /></a>
+                <a href="/" class="navbar-brand" style="color:black;font-weight:initial">SDK管理中心</a>
             </div>
+
 
             <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/">首页</a></li>
                     <li class="dropdown">
-                        <a href="/videos" class="dropdown-toggle">Videos</a>
+                        <a href="/videos" class="dropdown-toggle">热门应用</a>
                         <ul class="dropdown-menu multi-level" role="menu">
-                            <li><a href="/videos">Lessons</a></li>
-                            <li><a href="/shows">Shows</a></li>
-                            <li><a href="/series">Series</a></li>
+                            <li><a href="/videos">抢先热门</a></li>
+                            <li><a href="/shows">高清热门</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="/posts" class="dropdown-toggle">Articles</a>
+                        <a href="/posts" class="dropdown-toggle">经典应用</a>
                         <ul class="dropdown-menu multi-level" role="menu">
-                            <li><a href="/posts/category/tutorials">Tutorials</a></li>
-                            <li><a href="/posts/category/how-to">How To</a></li>
-                            <li><a href="/posts/category/technology">Technology</a></li>
-                            <li><a href="/posts/category/chitchat">Chit Chat</a></li>
+                            <li><a href="/posts/category/tutorials">烧脑应用</a></li>
+                            <li><a href="/posts/category/how-to">动作应用</a></li>
+                            <li><a href="/posts/category/technology">温情片刻</a></li>
+                            <li><a href="/posts/category/chitchat">走出困境</a></li>
                         </ul>
                     </li>
-                    <li><a href="/page/laravel-survival-guide">Learn Laravel-</a></li>
+                    <li><a href="/page/laravel-survival-guide">排行榜</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <form class="form-inline nav-search">
@@ -65,16 +65,16 @@
                 </ul>
             </div>
 
-        </div>
-    </nav>
+      </div>
+</nav>
 
     <div class="container realcontent">
         <div style="padding:0 10px">
             <div class="row" style="background:#F6F5F6;">
-                <div class="title-box">
+                <div class="title-box" style="padding-top:20px">
                     <table class="table" style="margin-bottom:10px;">
                         <tbody>
-                            <tr>
+                            <tr class="nav_type">
                                 <td class="tag-span2">年份:</td>
                                 <td>
                                     <a href="#" class="app-tags-active" val="all">全部</a>
@@ -85,7 +85,7 @@
                                     <a href="#" class="app-tags" val="2014">2011</a>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="nav_type">
                                 <td class="tag-span2">评分排序:</td>
                                 <td>
                                     <a href="#" class="app-tags-active" val="all">全部</a>
@@ -96,7 +96,7 @@
                                     <a href="#" class="app-tags" val="2014">6分以下</a>
                                 </td>
                             </tr>
-                            <tr style="margin-bottom:1px; solid:#DDD">
+                            <tr class="nav_type" style="margin-bottom:1px; solid:#DDD">
                                 <td class="tag-span2">国家地区:</td>
                                 <td>
                                     <a href="#" class="app-tags-active" val="all">全部</a>
@@ -110,29 +110,113 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="col-md-1-5 col-sm-4 col-xs-6" style="padding: 0 5px;">
-                    <div class="app-item">
-                        <a style="position:relative;display:block;" href="#">
-                            <img alt="暴风战记" title="暴风战记" src="http://ww3.sinaimg.cn/large/0069qWFHgw1f082cw8llqj30bo0go0vm.jpg" height="230" width=100%>
-                        </a>
-                        <div class="meta">
-                            <div style="width:100%;overflow:hidden;height:20px;">
-                                <a href="#" class="app-name">暴风战记</a>
-                                <span class="otherinfo">-7.9</span>
-                            </div>
-                            <div class="otherinfo">
-                                类型:
-                                <a class="apptype">卡牌</a>
-                                <a class="apptype">ARPG</a>
-                                <a class="apptype">动作</a>
-                            </div>
+        
+                {% for oneapp in pagedata %}
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <article class="block">
+                    <a class="block-thumbnail" href="/detail?id={{oneapp.id}}">
+                        <div class="thumbnail-overlay"></div>
+                        <span class="play_button"></span>
+                        <img src="{{oneapp.picurl}}" style="height:500px">
+                        <div class="details">
+                            <h2></h2>
+                            <span></span>
                         </div>
+                    </a>
+                    <div class="block-contents">
+                        <p class="date">{{oneapp.title}}<span class="label label-info">{{oneapp.doubanscore}}</span></p>
+                        <p class="desc">{{oneapp.desc}}</p>
                     </div>
+                </article>
+                </div>
+                {% endfor %}
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align:center">
+                    {% if pagenums.close %}
+                    {% else %}
+                    <nav>
+                        <ul class="pagination">
+                            {% if pagenums.hasprev %}
+                            <li>
+                                <a href="/list?page={{pagenums.prev}}&score={{score}}&type={{type}}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% for onepage in pagenums.pages %}
+                                {% ifequal onepage pagenums.curpage %}
+                                    <li class="active"><a href="#">{{onepage}}</a></li> 
+                                {% endifequal %}
+                                {% ifnotequal onepage pagenums.curpage %}
+                                    <li><a href="/list?page={{onepage}}&score={{score}}&type={{type}}">{{onepage}}</a></li> 
+                                {% endifnotequal %}
+                            {% endfor %}
+                            {% if pagenums.hasnext %}
+                            <li>
+                                <a href="/list?page={{pagenums.next}}&score={{score}}&type={{type}}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    {% endif %}
                 </div>
             </div>
         </div>
+        
     </div>
+
+    <footer class="footer">
+        <p>
+            免责声明：本网站所有内容都是靠程序在互联网上自动搜集而来，仅供测试和学习交流。
+            <br>
+            目前正在逐步删除和规避程序自动搜索采集到的不提供分享的版权影视。
+            <br>
+            若侵犯了您的权益，请即时发邮件通知站长
+        </p>
+        <em></em>
+    </footer>
+<script type="text/javascript" src="/static/js/headroom.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/moment.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.noty.js"></script>
+<script type="text/javascript" src="/static/js/default.js"></script>
+<script type="text/javascript" src="/static/js/top.js"></script>
+<script type="text/javascript">
+    var myElement = document.querySelector(".navbar");
+    //var headroom = new Headroom(myElement, { offset: 65 });
+    //headroom.init();
+    
+    $('document').ready(function(){
+        $('.dropdown').hover(function(){
+            $(this).addClass('open');
+        }, function(){
+            $(this).removeClass('open');
+        });
+        
+        $('#nav-toggle').click(function(){
+            $(this).toggleClass('active');
+            $('.navbar-collapse').toggle();
+            $('body').toggleClass('nav-open');
+        });
+        $('#mobile-subnav').click(function(){
+            if ($('.second-nav .navbar-left').css('display') == 'block'){
+                $('.second-nav .navbar-left').slideUp(function(){
+                    $(this).addClass('not-visible');
+                });
+                $(this).html('<i class="fa fa-bars"></i> Open Submenu');
+            }else{
+                $('.second-nav .navbar-left').slideDown(function(){
+                    $(this).removeClass('not-visible');
+                });
+                $(this).html('<i class="fa fa-close"></i> Close Submenu');
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

@@ -73,13 +73,17 @@ class moviedetail(models.Model):
     uptime = models.CharField(max_length=200)
     timelen = models.CharField(max_length=200)
     altername = models.CharField(max_length=200)
+    #doubanscore = models.DecimalField(max_digits=10,decimal_places=1)
     doubanscore = models.CharField(max_length=200)
+    doubanscore_float = models.FloatField(default=0)
 
     summary = models.TextField()
     piclist = models.CharField(max_length=500) #使用下划线分割
     baiduyunlink = models.CharField(max_length=200)
     baiduyunpwd = models.CharField(max_length=50)
     magnetlist = models.CharField(max_length=500) #使用下划线分割
+
+    createtime = models.IntegerField(default=0)
     class Meta:
         db_table = u'detail'
         app_label = 'movie'

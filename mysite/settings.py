@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'movie_new',
+        'NAME': 'movie_back',
         'USER': 'root',
         'PASSWORD': 'renlong123',
         'HOST': '10.66.116.11',

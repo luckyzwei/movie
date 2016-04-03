@@ -2312,7 +2312,7 @@ Navbar Toggle
 }
 
 .realcontent{
-    margin-top:65px;
+    margin-top:35px;
     padding-top:30px;
 }
 
@@ -2366,6 +2366,9 @@ Navbar Toggle
     vertical-align:middle !important;
     font-weight: bolder;
     width:100px;
+}
+.nav_type a{
+    margin:5px;
 }
 .app-tags-active:hover{
     text-decoration:none;
@@ -2457,3 +2460,8 @@ body,html{
     width:80px;
 }
 
+.weui_tabbar_label{
+    padding-top:11px;
+    padding-bottom:11px;
+    font-size:15px;
+}

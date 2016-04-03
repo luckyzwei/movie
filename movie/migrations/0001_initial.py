@@ -33,9 +33,36 @@ class Migration(migrations.Migration):
                 ('baiduyunlink', models.CharField(max_length=200)),
                 ('baiduyunpwd', models.CharField(max_length=50)),
                 ('magnetlist', models.CharField(max_length=500)),
+                ('createtime', models.IntegerField(default=0)),
             ],
             options={
                 'db_table': 'detail',
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='moviehot',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('title', models.CharField(max_length=200)),
+                ('movie', models.ForeignKey(to='movie.moviedetail')),
+            ],
+            options={
+                'db_table': 'hot',
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='movietop',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('title', models.CharField(max_length=200)),
+                ('desc', models.CharField(max_length=200)),
+                ('picurl', models.CharField(max_length=500)),
+                ('movieurl', models.CharField(max_length=500)),
+            ],
+            options={
+                'db_table': 'top',
             },
             bases=(models.Model,),
         ),

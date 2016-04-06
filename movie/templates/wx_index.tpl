@@ -7,16 +7,6 @@
         <link rel="stylesheet" href="/static/outlib/dist/lib/weui.css">
         <link rel="stylesheet" href="/static/outlib/dist/css/jquery-weui.css">
         <link rel="stylesheet" href="/static/css/wx_style.css">
-        <script>
-            function search()
-            {
-                alert("search!!!");
-                console.log("here we are!");
-            }
-            function cancle(){
-                alert("cancle");
-            }
-        </script>
     </head>
 
     <body style="height:100%">
@@ -24,10 +14,10 @@
         <div class="weui_tab">
           <div class="weui_tab_bd">
             <div class="weui_search_bar" id="search_bar">
-              <form class="weui_search_outer">
+              <form class="weui_search_outer" action="/wx_search">
                 <div class="weui_search_inner">
                   <i class="weui_icon_search"></i>
-                  <input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required/>
+                  <input type="search" name="keyword" class="weui_search_input" id="search_input" placeholder="搜索" required/>
                   <a href="javascript:search()"  class="weui_icon_clear" id="search_clear"></a>
                 </div>
                 <label for="search_input" class="weui_search_text" id="search_text">
@@ -74,6 +64,9 @@
                     </article>
                 </div>
             {% endfor %}
+          </div>
+          <div class="weui-row left-pa">
+              <a href="/wx_mv_list" class="weui_btn weui_btn_mini weui_btn_primary">查看更多电影</a>
           </div>
           </div>
 

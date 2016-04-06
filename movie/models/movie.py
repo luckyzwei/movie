@@ -1,5 +1,6 @@
 #!coding=utf-8
 from django.db import models
+import time
 '''
 # Create your models here.
 class director(models.Model):
@@ -88,7 +89,11 @@ class moviedetail(models.Model):
         db_table = u'detail'
         app_label = 'movie'
     def __unicode__(self):
-        return u'%s' % self.title
+        dis = 1459789809-self.createtime
+        if dis > 3570000:
+            dis = 'no'
+            return u'no_%s' % (self.title)
+        return u'%d_%s' % (dis, self.title)
 
 #热门推荐
 class moviehot(models.Model):

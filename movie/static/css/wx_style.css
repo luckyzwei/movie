@@ -87,6 +87,13 @@ body {
 .wx-block .wx-block-contents p.wx-name .label.label-info {
   background: #C0C0C0;
 }
+.search_title{
+    margin:10px;
+    font-size:12px;
+}
+.error_title{
+    margin:50px;
+}
 .title{
     margin:10px;
 }

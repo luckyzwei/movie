@@ -137,8 +137,6 @@ def RequestPostPa(request, fieldname):
 
 def BatchGetPostPa(request, fieldnamedict):
     returndict = {}
-    for fieldname in fieldnamedict:
-        if fieldname in request.POST and request.POST[fieldname]:
 
 def ReturnMsg(filename, msg):
     return render_to_response(filename, {'msg':msg})

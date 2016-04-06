@@ -65,7 +65,7 @@ def list(request):
 def wx_mv_list(request):
     render_dict = {}
     if request.method == 'POST':
-        return render_to_response("error.html",{'msg':u'请求方式不正确'})
+        return render_to_response("wx_error.tpl",{'msg':u'请求方式不正确'})
     type = None
     page = 1
     if "type" in request.GET and request.GET["type"]:
@@ -73,7 +73,7 @@ def wx_mv_list(request):
     if "page" in request.GET and request.GET["page"]:
         page = int(request.GET["page"])
     if page < 0:
-        return render_to_response("error.html", {"msg":u'页码不正确'})
+        return render_to_response("wx_error.tpl", {"msg":u'页码不正确'})
     fromindex = (page - 1)*PAGENUM
     endindex = page*PAGENUM
     pageallcount = 0
@@ -112,9 +112,10 @@ def wx_mv_list(request):
     render_dict["lasturl"] = lasturl
     #如果选择了类型，那么结果就按照分数来排序
     return render_to_response("wx_mv_list.tpl", render_dict)
+
 def wx_search_ad(request):
     if request.method == 'POST':
-        return render_to_response("error.html",{'msg':u'请求方式不正确'})
+        return render_to_response("wx_error.tpl",{'msg':u'请求方式不正确'})
     type = None
     score = None
     page = 1
@@ -125,7 +126,7 @@ def wx_search_ad(request):
     if 'page' in request.GET and request.GET["page"]:
         page = int(request.GET["page"])
     if type == None and score == None:
-        return render_to_response("error.html",{"msg":u'参数不正确'})
+        return render_to_response("wx_error.tpl",{"msg":u'参数不正确'})
     fromindex = (page - 1)*PAGENUM
     endindex = page*PAGENUM
     render_dict = {}
@@ -139,24 +140,39 @@ def wx_search_ad(request):
 
 def wx_search(request):
     if request.method == 'POST':
-        return render_to_response("error.html",{'msg':u'请求方式不正确'})
+        return render_to_response("wx_error.tpl",{'msg':u'请求方式不正确'})
     if 'keyword' in request.GET and request.GET['keyword']:
         keyword = request.GET["keyword"]
     else:
-        return render_to_response("error.html",{"msg":u'参数不正确:-1'})
+        return render_to_response("wx_error.tpl",{"msg":u'参数不正确:-1'})
+    page = 1
+    if 'page' in request.GET and request.GET['page']:
+        page = int(request.GET['page'])
+    if page <= 0:
+        page = 1
+    fromindex = (page-1)*PAGENUM
+    endindex = page*PAGENUM
     render_dict = {}
-    search_data = moviedetail.objects.filter(Q(title__contains=keyword)|Q(directors__contains=keyword)|Q(actors__contains=keyword))
-    datalist = []
-    for onedata in search_data:
-        tmpone = {}
-        tmpone["title"] = onedata.title
-        tmpone["id"] = onedata.id
-        tmpone["picurl"] = getpicurl(onedata.titlepic, False)
-        tmpone["desc"] = convertlongtext(onedata.summary)
-        datalist.append(tmpone)
+    pageallcount = 0
+    pageallcount = moviedetail.objects.filter(Q(title__contains=keyword)|Q(directors__contains=keyword)|Q(actors__contains=keyword)).count()
+    search_data = moviedetail.objects.filter(Q(title__contains=keyword)|Q(directors__contains=keyword)|Q(actors__contains=keyword)).order_by("-createtime")[fromindex:endindex]
+    datalist = moviedetail2dictlist(search_data, False)
+    IsFirstPage = False
+    IsLastPage = False
+    if page == 1:
+        IsFirstPage = True
+    if page >= pageallcount:
+        IsLastPage = True
+    urlpre = "/wx_search?keyword="+keyword
+    beforurl = urlpre + "&page=%d" % (page - 1)
+    lasturl = urlpre + "&page=%d" % (page + 1)
     render_dict["newlist"] = datalist
     render_dict["keyword"] = keyword
     render_dict["count"] = len(datalist)
+    render_dict["IsFirstPage"] = IsFirstPage
+    render_dict["IsLastPage"] = IsLastPage
+    render_dict["beforurl"] = beforurl
+    render_dict["lasturl"] = lasturl
     return render_to_response("wx_search.tpl", render_dict)
 def wx_index(request):
     #得到最热榜
@@ -174,7 +190,7 @@ def wx_index(request):
     render_dict["hotlist"] = hotlist
 
     #得到最新
-    newdata = moviedetail.objects.order_by("-createtime")[:16]
+    newdata = moviedetail.objects.order_by("-createtime")[:15]
     newlist = moviedetail2dictlist(newdata, False)
     render_dict["newlist"] = newlist
 
@@ -246,15 +262,15 @@ def moviedetail2dict(detail,isbig):
 
 def wx_detail(request):
     if request.method == 'POST':
-        return render_to_response("error.html",{'msg':u'请求方式不正确'})
+        return render_to_response("wx_error.tpl",{'msg':u'请求方式不正确'})
     if 'id' in request.GET and request.GET['id']:
         movieid = request.GET["id"]
     else:
-        return render_to_response("error.html",{"msg":u'参数不正确:-1'})
+        return render_to_response("wx_error.tpl",{"msg":u'参数不正确:-1'})
     try:
         moviedata = moviedetail.objects.get(id=movieid)
     except:
-        return render_to_response("error.html",{"msg":u"您查找的数据不存在"})
+        return render_to_response("wx_error.tpl",{"msg":u"您查找的数据不存在"})
 
     #构造数据
     moviedict = moviedetail2dict(moviedata, True)

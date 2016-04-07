@@ -7,11 +7,11 @@
 #########################################################################
 
 
-PICURLPRE = u'http://test-10005198.file.myqcloud.com/pic/'
+PICURLPRE = u'http://test-10030003.file.myqcloud.com/pic/'
 FILEPRE = ''
 PAGENUM = 18
 
-MIN_PICURLPRE = u'http://test-10005198.file.myqcloud.com/min/'
+MIN_PICURLPRE = u'http://test-10030003.file.myqcloud.com/min/'
 MIN_FILEPRE = 'min_'
 
 

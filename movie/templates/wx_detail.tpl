@@ -30,7 +30,7 @@
 
                 <div class="container-fluid detail_content">
                     <ol class="breadcrumb">
-                        <li><a href="#">首页</a></li>
+                        <li><a href="/wx_index">首页</a></li>
                         <li>{{title}}</li>
                     </ol>
                     <div class="row">

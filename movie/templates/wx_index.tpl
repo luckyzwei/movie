@@ -31,7 +31,6 @@
           <!--最热应用-->
           <div class="weui-row"> 
             <span class="title">最热电影</span>
-            <hr/>
           </div>
           <div class="weui-row left-pa">
             {% for hotinfo in hotlist %}
@@ -49,7 +48,6 @@
           </div>
           <div class="weui-row">
             <span class="title">最新电影</span>
-            <hr/>
           </div>
           <div class="weui-row left-pa">
             {% for onenew in newlist %}

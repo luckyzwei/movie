@@ -131,7 +131,7 @@
             </div>
           <div class="weui_tabbar">
             <a href="/wx_index" class="weui_tabbar_item">
-              <p class="weui_tabbar_label">最热应用</p>
+              <p class="weui_tabbar_label">首页</p>
             </a>
             <a href="/wx_mv_index" class="weui_tabbar_item">
               <p class="weui_tabbar_label">分类</p>

@@ -137,7 +137,7 @@
               <p class="weui_tabbar_label">分类</p>
             </a>
             <a href="javascript:;" class="weui_tabbar_item">
-              <p class="weui_tabbar_label">本周推荐</p>
+              <p class="weui_tabbar_label">关于</p>
             </a>
           </div>
         </div> 

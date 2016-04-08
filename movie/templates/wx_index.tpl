@@ -30,7 +30,7 @@
 
           <!--最热应用-->
           <div class="weui-row"> 
-            <span class="title">最热应用</span>
+            <span class="title">最热电影</span>
             <hr/>
           </div>
           <div class="weui-row left-pa">
@@ -48,7 +48,7 @@
             {% endfor %}
           </div>
           <div class="weui-row">
-            <span class="title">最新应用</span>
+            <span class="title">最新电影</span>
             <hr/>
           </div>
           <div class="weui-row left-pa">
@@ -80,7 +80,7 @@
               <p class="weui_tabbar_label">分类</p>
             </a>
             <a href="javascript:;" class="weui_tabbar_item">
-              <p class="weui_tabbar_label">本周推荐</p>
+              <p class="weui_tabbar_label">关于</p>
             </a>
           </div>
         </div> 

@@ -5,27 +5,12 @@ from movie.utils import utils
 from movie.models.movie import *
 from conf import *
 from django.db.models import Q
+from comm import *
 
 # Create your views here.
 
 from movie.models.movie import *
 
-def getpicurl(oldurl, isbig):
-    if isbig:
-        newurl = PICURLPRE + FILEPRE + oldurl.split('/')[-1]
-        print "oldurl:%s newurl:%s" % (oldurl, newurl)
-    else:
-        newurl = MIN_PICURLPRE + MIN_FILEPRE + oldurl.split('/')[-1]
-        print "oldurl:%s newurl:%s" % (oldurl, newurl)
-    return newurl
-def converttitle(title):
-    if len(title) > 8:
-        return u"%s.." % title[:4]
-    return title
-def convertlongtext(strnumber):
-    if len(strnumber) > 10:
-        return "%s..." % strnumber[:10]
-    return strnumber
 
 def list(request):
     if request.method == 'POST':

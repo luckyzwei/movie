@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from movie.views.views import *
+from movie.views.wx import *
 
 urlpatterns = patterns('',
     # Examples:
@@ -18,4 +19,6 @@ urlpatterns = patterns('',
     url(r'^wx_search/',wx_search),
     url(r'^wx_search_ad/',wx_search_ad),
     url(r'^wx_mv_list/',wx_mv_list),
+    url(r'^wxinter/',WXInter),
+    url(r'^createmenu/',CreateMenu),
 )

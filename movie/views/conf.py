@@ -7,6 +7,20 @@
 #########################################################################
 
 
+WX_APPID = u'wxa01a90734eace13c' 
+WX_TOKEN = u'caiwuziyoucaishizhende123'
+WX_SECRET_KEY = u'7169791317fbd23c6affaf2393fbed89'
+WX_AES_KEY = u'lNza3jW1Q7MSiNsY3NkX6Eq0JZi9JF9Oy7RujmlgsL6'
+
+
+
+
+
+
+
+
+
+
 PICURLPRE = u'http://test-10030003.file.myqcloud.com/pic/'
 FILEPRE = ''
 PAGENUM = 18

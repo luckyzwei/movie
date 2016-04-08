@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-        <title>weixintest</title>
+        <title>51电影</title>
         <link rel="stylesheet" href="/static/outlib/dist/lib/weui.css">
         <link rel="stylesheet" href="/static/outlib/dist/css/jquery-weui.css">
         <link rel="stylesheet" href="/static/css/wx_style.css">

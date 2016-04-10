@@ -40,7 +40,7 @@
                             <img src="{{hotinfo.picurl}}" style="height:140px">
                         </a>
                         <div class="wx-block-contents">
-                            <p class="wx-name">{{hotinfo.title}}<span class="label label-info">{{hotinfo.doubanscore}}分</span></p>
+                            <p class="wx-name">{{hotinfo.title}}<span class="label label-info">{{hotinfo.doubanscore}}</span></p>
                         </div>
                     </article>
                 </div>

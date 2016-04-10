@@ -1007,7 +1007,6 @@ h4.modal-title {
 .rsContent .details .description .shadow {
   position: absolute;
   color: #000;
-  padding-left: 1px;
   padding-top: 1px;
 }
 .rsContent .details .headline .origin,

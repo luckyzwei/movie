@@ -12,21 +12,8 @@
     <body style="height:100%">
         <div class="weui_tab">
             <div class="weui_tab_bd">
-                <div class="weui_search_bar" id="search_bar">
-                    <form class="weui_search_outer" action="/wx_search">
-                        <div class="weui_search_inner">
-                            <i class="weui_icon_search"></i>
-                            <input type="search" name="keyword" class="weui_search_input" id="search_input" placeholder="搜索" required/>
-                            <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
-                        </div>
-                        <label for="search_input" class="weui_search_text" id="search_text">
-                            <i class="weui_icon_search"></i>
-                            <span>搜索</span>
-                        </label>
-                    </form>
-                    <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
-                </div>
 
+                {% include 'wx_header.tpl'%}
                 <div class="weui-row">
                     <span class="search_title">关键词"{{keyword}}" 共找到{{count}}个结果</span>
                 </div>
@@ -57,20 +44,8 @@
             {% endif %}
           </div>
             </div>
+            {% include "wx_foot.tpl" %}
 
-          <!--蠎暮Κ蟇ｼ闊ｪ譬?-->
-
-          <div class="weui_tabbar">
-            <a href="/wx_index" class="weui_tabbar_item ">
-              <p class="weui_tabbar_label">最热首页</p>
-            </a>
-            <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
-              <p class="weui_tabbar_label">分类</p>
-            </a>
-            <a href="javascript:;" class="weui_tabbar_item">
-              <p class="weui_tabbar_label">关于</p>
-            </a>
-          </div>
         </div>
         <script src="/static/outlib/dist/lib/jquery-2.1.4.js"></script>
         <script src="/static/outlib/dist/js/jquery-weui.js"></script>

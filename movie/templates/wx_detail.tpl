@@ -118,6 +118,7 @@
     /* width: 100px; */
     /* position: relative; */
     center: inherit;
+    height:154px;
     /* display: inline-block; */
     /* display: block; */
     /* text-align-last: inherit; */

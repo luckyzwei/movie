@@ -111,7 +111,7 @@
                         </div>
 
                         <div class="col-md-12">
-<p style="background-image:url(http://test-10030003.file.myqcloud.com/0.gif);background-repeat: no-repeat;">
+<p style="background-image:url(http://test-10030003.file.myqcloud.com/0.gif);background-repeat: no-repeat; background-size:contain; height:194px;">
 <img src="http://test-10030003.file.myqcloud.com/qrcode_for_gh_194246258fc7_258.jpg" style="
     /* height: 100px; */
     padding: 20px;

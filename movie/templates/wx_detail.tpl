@@ -111,7 +111,17 @@
                         </div>
 
                         <div class="col-md-12">
-                            <img src="http://test-10030003.file.myqcloud.com/qrcode_for_gh_194246258fc7_258.jpg">
+<p style="background-image:url(http://test-10030003.file.myqcloud.com/0.gif);background-repeat: no-repeat;">
+<img src="http://test-10030003.file.myqcloud.com/qrcode_for_gh_194246258fc7_258.jpg" style="
+    /* height: 100px; */
+    padding: 20px;
+    /* width: 100px; */
+    /* position: relative; */
+    center: inherit;
+    /* display: inline-block; */
+    /* display: block; */
+    /* text-align-last: inherit; */
+"></p>
                         </div>
 
                     </div>

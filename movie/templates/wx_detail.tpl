@@ -111,7 +111,7 @@
                         </div>
 
                         <div class="col-md-12">
-<img src="http://test-10030003.file.myqcloud.com/2.jpg" />
+<img src="http://test-10030003.file.myqcloud.com/2.jpg" style="width:100%"/>
                         </div>
 
                     </div>
